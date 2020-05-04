@@ -1,0 +1,7 @@
+<form [formGroup]="emailForm">
+  <label>Input email
+    <input type="email" formControlName="email" />
+  </label>
+
+  <div *ngIf="emailForm.get('email').value.length > 0">email is {{emailForm.get('email').valid ? 'valid': 'invalid'}}</div>
+</form> 
